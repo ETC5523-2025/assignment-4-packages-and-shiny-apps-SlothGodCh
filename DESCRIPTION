@@ -18,7 +18,10 @@ Imports:
     dplyr,
     ggplot2,
     shiny,
-    shinythemes
+    shinythemes,
+    plotly,
+    DT,
+    bslib
 Suggests:
     knitr,
     rmarkdown,

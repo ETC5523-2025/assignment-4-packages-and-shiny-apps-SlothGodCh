@@ -43,32 +43,50 @@ launch_dashboard()
 ```
 
 
+
 ### A Tour of the Dashboard
 
 The **Palmer Penguins Explorer** dashboard provides several interactive controls to help you explore the data:
 
-*   **Filter by Bill Length**: A slider allows you to focus on a specific range of bill lengths.
-*   **Select Species**: Checkboxes let you include or exclude the Adelie, Chinstrap, and Gentoo species from the visualizations.
-*   **Select Y-Axis Variable**: A dropdown menu allows you to change the variable on the plot's y-axis, enabling you to compare bill length against bill depth, flipper length, or body mass.
+* **Dark Mode Toggle**: Click the sun/moon icon in the top-right corner to switch between light and dark themes.
 
-The dashboard's main panel displays a reactive scatter plot and a data table that update instantly based on your selections.
+* **Species Filter**: A dropdown menu allows you to focus on a single species (Adelie, Chinstrap, or Gentoo) or view all species together.
+
+* **X-Axis Variable**: Choose which measurement to display on the horizontal axis (Bill Length, Bill Depth, Flipper Length, or Body Mass).
+
+* **Y-Axis Variable**: Choose which measurement to display on the vertical axis, enabling comparison of any two variables.
+
+* **Color by Species**: A checkbox that toggles species coloring on or off, useful for viewing overall patterns or species-specific differences.
+
+* **Bill Length Filter**: A slider allows you to narrow the data to a specific range of bill lengths.
+
+The dashboard features three main sections:
+
+1. **KPI Cards**: Display summary statistics (average body mass, average flipper length, and number of penguins shown) that update based on your filters.
+
+2. **Interactive Plot**: A dynamic scatter plot with hover tooltips showing detailed information for each penguin.
+
+3. **Data Table**: A filterable, sortable table showing all penguins that match your current selection.
 
 ### Example: Finding Insights
 
-The dashboard makes it easy to discover patterns. For instance, by selecting only the "Gentoo" species and plotting "flipper_length_mm" against "body_mass_g", you can observe a strong positive correlation, confirming that Gentoo penguins with longer flippers tend to have a higher body mass. Comparing this to the other species reveals distinct clusters and differences in size and proportions.
+The dashboard makes it easy to discover patterns. For instance:
+
+* By selecting **Gentoo** species and comparing **Flipper Length** vs **Body Mass**, you can observe a strong positive correlation, confirming that Gentoo penguins with longer flippers tend to have higher body mass.
+
+* By toggling **Color by Species** off, you can examine overall trends across all penguins without species distinction.
+
+* Using **dark mode** enhances viewing comfort during extended analysis sessions.
+
+Comparing different species reveals distinct clusters and differences in size and proportions across the Palmer Archipelago penguin populations.
 
 ### Data Source
 
 This package uses data from the `palmerpenguins` R package.
 
-*Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0.*
-<https://allisonhorst.github.io/palmerpenguins/>
+*Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. https://allisonhorst.github.io/palmerpenguins/*
 
+### Additional Resources
 
-
-
-
-
-
-
-
+For more information about the package, visit the pkgdown website at:
+https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-SlothGodCh/

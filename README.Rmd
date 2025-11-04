@@ -1,0 +1,83 @@
+---
+output: github_document
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+# penguinDash
+
+`penguinDash` is an R package built for the Monash University unit ETC5523 – Communicating with Data.
+
+It provides an interactive dashboard for exploring the well-known `palmerpenguins` dataset, which contains data for three penguin species observed in the Palmer Archipelago, Antarctica.
+
+### What it does
+
+The package helps users visualize and understand the relationships between various physical measurements of penguins.
+
+It includes:
+
+*   A cleaned dataset, `penguins_clean`, derived from the `palmerpenguins` R package.
+*   An interactive dashboard launched by the function `launch_dashboard()`.
+*   A vignette that provides a guide to the dataset and how to use the dashboard effectively.
+
+### Installation and Use
+
+#### Install and load
+
+You can install `penguinDash` from its GitHub repository and load it into your R session.
+```{r, eval=FALSE}
+install.packages("remotes")
+remotes::install_github("ETC5523-2025/assignment-4-packages-and-shiny-apps-SlothGodCh")
+
+library(penguinDash)
+```
+
+#### Access the data
+
+The cleaned dataset is included with the package and can be accessed directly after loading.
+
+```{r,eval=FALSE}
+# Preview the first few rows of the dataset
+head(penguins_clean)
+```
+
+#### Launch the dashboard
+
+The main feature of the package is its interactive Shiny dashboard.
+
+```{r,eval=FALSE}
+# This command will open the dashboard in your default web browser
+launch_dashboard()
+```
+
+### Data Source
+
+The data was collected and made available by Dr. Kristen Gorman, Dr. Allison Horst, and Dr. Alison Hill, and is available in the R package `palmerpenguins`.
+
+Horst AM, Hill AP, Gorman KB (2020). *palmerpenguins: Palmer Archipelago (Antarctica) penguin data*. R package version 0.1.0. <https://allisonhorst.github.io/palmerpenguins/>
+
+### Interpretation Example
+
+Using the dashboard reveals distinct patterns among the penguin species. For example, by plotting flipper length against body mass, you can clearly see that Gentoo penguins are generally larger and have longer flippers than both Adelie and Chinstrap penguins. The interactive filters allow for a deeper exploration of these relationships, such as observing how bill dimensions differ between male and female penguins within the same species.
+
+### License
+
+MIT + file LICENSE
+Author: Jesus Biurrun
+
+### Website Link
+
+For more detailed documentation, please visit the package website:
+
+<https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-SlothGodCh/>
+
+

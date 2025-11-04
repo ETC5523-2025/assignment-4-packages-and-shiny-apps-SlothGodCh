@@ -79,8 +79,7 @@ within the same species.
 
 MIT + file LICENSE Author: Jesus Biurrun
 
-### Website Link
+## Website
 
-For more detailed documentation, please visit the package website:
-
+The pkgdown website for this package is available at:
 <https://etc5523-2025.github.io/assignment-4-packages-and-shiny-apps-SlothGodCh/>

@@ -1,19 +1,22 @@
 #' Launch the Penguin-Dash Shiny App
 #'
-#' This function launches the interactive Shiny dashboard for exploring the Palmer Penguins data.
+#' Launches an interactive Shiny dashboard for exploring the Palmer Penguins dataset.
 #'
-#' @return This function does not return a value; it is called for its side effect of
-#'   launching the Shiny application.
+#' @return No return value; opens the app in a browser.
+#' @importFrom shiny runApp
+#' @importFrom dplyr filter pull
+#' @importFrom ggplot2 ggplot aes geom_point
+#' @importFrom shinythemes shinytheme
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#'   launch_dashboard()
+#' launch_dashboard()
 #' }
 launch_dashboard <- function() {
   appDir <- system.file("shiny-app", package = "penguinDash")
   if (appDir == "") {
-    stop("Could not find shiny-app directory. Try re-installing `penguinDash`.", call. = FALSE)
+    stop("Shiny app directory not found. Reinstall penguinDash.", call. = FALSE)
   }
   shiny::runApp(appDir, display.mode = "normal")
 }

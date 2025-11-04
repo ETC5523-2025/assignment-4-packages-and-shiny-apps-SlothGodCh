@@ -5,20 +5,22 @@ Authors@R:
     person(given = "Jesus",
            family = "Biurrun",
            role = c("aut", "cre"),
+           email = "your.email@example.com")
 Description: Provides an interactive Shiny dashboard to visualize and explore the
     palmerpenguins dataset. Users can filter by bill length and species and
     select different variables to plot.
 License: MIT + file LICENSE
 Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Imports:
     dplyr,
     ggplot2,
     shiny,
-    shinythemes,
-    palmerpenguins
+    shinythemes
 Suggests:
     knitr,
-    rmarkdown
+    rmarkdown,
+    palmerpenguins
 VignetteBuilder: knitr

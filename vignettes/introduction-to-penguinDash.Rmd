@@ -1,0 +1,74 @@
+---
+title: "Introduction to penguinDash"
+author: "Jesus Biurrun"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to penguinDash}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+### Introduction
+
+The `penguinDash` package provides an interactive Shiny dashboard for exploring the `palmerpenguins` dataset. This vignette serves as a comprehensive guide to installing the package, loading the included data, and launching the interactive application.
+
+### Installation
+
+The development version of `penguinDash` can be installed directly from its GitHub repository. You will need the `remotes` package to do this.
+```{r, eval=FALSE}
+install.packages("remotes")
+remotes::install_github("ETC5523-2025/assignment-4-packages-and-shiny-apps-SlothGodCh")
+```
+### Using the Package
+
+#### Loading the Package and Data
+
+Once installed, load the package into your R session to get started.
+
+```{r, eval=FALSE}
+library(penguinDash)
+```
+#### Launching the Interactive Dashboard
+
+The main feature of `penguinDash` is its interactive dashboard. To launch it, simply run the `launch_dashboard()` function.
+```{r, eval=FALSE}
+# This command will open the Shiny app in a new window or your browser
+launch_dashboard()
+```
+
+
+### A Tour of the Dashboard
+
+The **Palmer Penguins Explorer** dashboard provides several interactive controls to help you explore the data:
+
+*   **Filter by Bill Length**: A slider allows you to focus on a specific range of bill lengths.
+*   **Select Species**: Checkboxes let you include or exclude the Adelie, Chinstrap, and Gentoo species from the visualizations.
+*   **Select Y-Axis Variable**: A dropdown menu allows you to change the variable on the plot's y-axis, enabling you to compare bill length against bill depth, flipper length, or body mass.
+
+The dashboard's main panel displays a reactive scatter plot and a data table that update instantly based on your selections.
+
+### Example: Finding Insights
+
+The dashboard makes it easy to discover patterns. For instance, by selecting only the "Gentoo" species and plotting "flipper_length_mm" against "body_mass_g", you can observe a strong positive correlation, confirming that Gentoo penguins with longer flippers tend to have a higher body mass. Comparing this to the other species reveals distinct clusters and differences in size and proportions.
+
+### Data Source
+
+This package uses data from the `palmerpenguins` R package.
+
+*Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0.*
+<https://allisonhorst.github.io/palmerpenguins/>
+
+
+
+
+
+
+
+
+
